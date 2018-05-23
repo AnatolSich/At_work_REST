@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
-public class UserSrorage {
+public class UserStorage {
 
     private static final AtomicInteger ID_SEQUENCE = new AtomicInteger(1);
     private static final ConcurrentMap<Long, User> userStorage = new ConcurrentHashMap();
