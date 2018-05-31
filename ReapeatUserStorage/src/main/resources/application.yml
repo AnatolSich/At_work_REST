@@ -1,9 +1,16 @@
 spring:
+  application:
+    name: restApp
   profiles:
     active: dev
+
 
 server:
   port: 8080
   compression:
     enabled: true
     mime-types: application/json
+
+security:
+  basic:
+    enanled: false
