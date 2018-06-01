@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 @Service
 public class UserService implements UserRepository{
@@ -27,7 +27,7 @@ public class UserService implements UserRepository{
     }
 
     @Override
-    public Map<Long, User> get() {
-        return userStorage.getUserstorage();
+    public ConcurrentMap<Long, User> getUserStorage() {
+        return userStorage.getUserStorage();
     }
 }

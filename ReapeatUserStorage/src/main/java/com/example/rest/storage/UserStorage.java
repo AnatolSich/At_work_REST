@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UserStorage {
 
     private static final AtomicInteger ID_SEQUENCE = new AtomicInteger(1);
-    private static final ConcurrentMap<Long, User> userStorage = new ConcurrentHashMap();
+    private static final ConcurrentMap<Long, User> userStorage = new ConcurrentHashMap<>();
 
     public User save(User user) {
         Optional<User> persistedUser = findByUserName(user.getUserName());
@@ -35,7 +35,7 @@ public class UserStorage {
         return Long.parseLong(String.valueOf(id));
     }
 
-    public ConcurrentMap<Long, User> getUserstorage() {
+    public ConcurrentMap<Long, User> getUserStorage() {
         return userStorage;
     }
 }

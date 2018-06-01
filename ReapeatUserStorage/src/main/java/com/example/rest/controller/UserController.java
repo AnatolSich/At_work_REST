@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 @RestController
 public class UserController {
@@ -23,7 +23,7 @@ public class UserController {
         return UserDto.UserDtoManager.toUserDto(savedUser);
     }
 
-    public Map<Long, User> getUsers() {
-        return userService.get();
+    public ConcurrentMap<Long, User> getUsers() {
+        return userService.getUserStorage();
     }
 }

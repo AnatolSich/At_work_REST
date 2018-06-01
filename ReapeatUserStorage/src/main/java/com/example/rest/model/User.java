@@ -15,7 +15,7 @@ import static com.example.rest.config.Constants.USERNAME_OR_PASSWORD_REGEXP;
 
 @Data
 @Builder(builderMethodName = "of", buildMethodName = "create")
-@EqualsAndHashCode(exclude = {"id", "plainTextPassword", "hashedPassword"})
+@EqualsAndHashCode(exclude = {"id", "plainTextPassword", "hashedTextPassword"})
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 

@@ -10,6 +10,6 @@ import java.util.Map;
 public interface UserRepository {
     User save(User user) throws UserAlreadyExistException;
 
-    Map<Long,User> get();
+    Map<Long,User> getUserStorage();
 
 }
