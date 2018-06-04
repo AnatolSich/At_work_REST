@@ -2,7 +2,7 @@
 *.properties
 /**/.idea/*
 /**/target/*
-/**/*/test/*
+###/**/*/test/*###
 
 /target/
 !.mvn/wrapper/maven-wrapper.jar
